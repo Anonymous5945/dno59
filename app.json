@@ -1,16 +1,8 @@
 {
   "name": "Telegram bot",
-  "description": "A Telegram app (and youtube-dl) based on Pyrogram.",
+  "description": "A Telegram app based on Pyrogram.",
   "keywords": [
-    "telegram",
-    "best",
-    "indian",
-    "pyrogram",
-    "3",
-    "plugin",
-    "modular",
-    "productivity",
-    "youtube-dl"
+    "telegram"
   ],
   "repository": "https://github.com/Team-DnO/",
   "success_url": "https://github.com/Team-DnO/",
@@ -37,36 +29,17 @@
       "value": "",
       "required": false
     },
-    "TG_OFFENSIVE_API": {
-      "description": "should be an URL accepting the FormParams {i}, {m}, and {t}",
-      "required": false
-    },
-    "DO_CAPTION_1": {
-      "description": ".Enc'd.&.Upl'd.By.Team.D&O-",
-      "value": ".Enc'd.&.Upl'd.By.Team.D&O-",
-      "required": false
-    },
-    "DO_CAPTION_2": {
-      "description": "@dramaOST",
-      "value": "@dramaOST",
-      "required": false
-    },
-    "DO_CAPTION_3": {
-      "description": "Muxed English Subtitle",
-      "value": "Muxed English Subtitle",
-      "required": false
-    },
     "AUTH_CHANNEL": {
       "description": "should be an integer. The BOT API ID of the Telegram Group, where the Leecher should work.",
       "value": "-1001215557536 -1001454596428 -1001450597220 -1001139792623 -1001343951559 -1001291580003 -1001302900717 -1001428281865 -1001486147767"
     },
-    "user_ids1": {
+    "chan_ids": {
       "description": "should be an integer. The BOT API ID of the Telegram Group, where the Leecher should work.",
-      "value": "-1001219171544 -1001366455182"
+      "value": ""
     },
-    "user_ids2": {
+    "name_ids": {
       "description": "should be an integer. The BOT API ID of the Telegram Group, where the Leecher should work.",
-      "value": "-1001165009913 -1001093214354"
+      "value": ""
     },
     "CHUNK_SIZE": {
       "description": "should be an integer",
