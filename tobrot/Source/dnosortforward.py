@@ -19,7 +19,6 @@ from tobrot import (
     chan_ids2
 )
 
-import asyncio
 import time
 from pyrogram.types import (
     InlineKeyboardButton,
@@ -45,7 +44,7 @@ async def dnosortfor1_f(client, message):
        telegraph.create_account(short_name='1337')
        response = telegraph.create_page(
          "Muxed Subtitles",
-         html_content=n1
+         html_content="Muxed Subtitles : " + n1
          )
        file_context= 'https://telegra.ph/{}'.format(response['path'])
        m2 =f"Muxed Subtitles : <a href={file_context}>Click Me</a>\n\n"
@@ -101,7 +100,7 @@ async def dnosortfor2_f(client, message):
        telegraph.create_account(short_name='1337')
        response = telegraph.create_page(
          "Muxed Subtitles",
-         html_content=n1
+         html_content="Muxed Subtitles : " + n1
          )
        file_context= 'https://telegra.ph/{}'.format(response['path'])
        m2 =f"Muxed Subtitles : <a href={file_context}>Click Me</a>\n\n"
