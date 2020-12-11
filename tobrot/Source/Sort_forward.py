@@ -9,6 +9,7 @@ LOGGER = logging.getLogger(__name__)
 
 import os
 import re
+from telegraph import Telegraph
 from tobrot import (
     DOWNLOAD_LOCATION,
     MAX_MESSAGE_LENGTH,
@@ -25,14 +26,33 @@ from pyrogram.types import (
 )
 
 async def sortfor1_f(client, message):
-    n=message.message_id
-    w=message.reply_to_message.message_id
-    user_id = message.chat.id
-    user_id = message.chat.id
-    a=[]
-    b=[]
-    o=[]
-    p=[]
+   n=message.message_id
+   w=message.reply_to_message.message_id
+   user_id = message.chat.id
+   user_id = message.chat.id
+   a=[]
+   b=[]
+   o=[]
+   p=[]
+   url_parts = shlex.split(message.reply_to_message.text)
+   if len(url_parts) == 1:
+       f1= 1
+       m2 = "Muxed English Subtitle"
+   elif len(url_parts) == 2:
+       n1 = url_parts[1]
+       telegraph = Telegraph()
+       telegraph.create_account(short_name='1337')
+       response = telegraph.create_page(
+         "Muxed Subtitles",
+         html_content="Muxed Subtitles : " + n1
+         )
+       file_context= 'https://telegra.ph/{}'.format(response['path'])
+       m2 =f"Muxed Subtitles : <a href={file_context}>Click Me</a>\n"
+       f1 = 2
+   else:
+       print("out of bound")
+       f1 = 4
+   if f1 < 3 :
     for i in range(w, n):
         u_id = int(i)
         m = await client.get_messages(user_id, u_id)
@@ -63,21 +83,40 @@ async def sortfor1_f(client, message):
     for i,j in zip(name,doc):
      if i.lower().endswith(".mkv"):
       for ut in sort_id1:
-       await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\nMuxed English Subtitles\nPlay it via external player</b>")
+       await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 +"\nPlay it via external player</b>")
        await asyncio.sleep(3)
      if i.lower().endswith(".mp4"):
       for ut in sort_id1:
        await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
        await asyncio.sleep(3)
 async def sortfor2_f(client, message):
-    n=message.message_id
-    w=message.reply_to_message.message_id
-    user_id = message.chat.id
-    user_id = message.chat.id
-    a=[]
-    b=[]
-    o=[]
-    p=[]
+   n=message.message_id
+   w=message.reply_to_message.message_id
+   user_id = message.chat.id
+   user_id = message.chat.id
+   a=[]
+   b=[]
+   o=[]
+   p=[]
+   url_parts = shlex.split(message.reply_to_message.text)
+   if len(url_parts) == 1:
+       f1= 1
+       m2 = "Muxed English Subtitle"
+   elif len(url_parts) == 2:
+       n1 = url_parts[1]
+       telegraph = Telegraph()
+       telegraph.create_account(short_name='1337')
+       response = telegraph.create_page(
+         "Muxed Subtitles",
+         html_content="Muxed Subtitles : " + n1
+         )
+       file_context= 'https://telegra.ph/{}'.format(response['path'])
+       m2 =f"Muxed Subtitles : <a href={file_context}>Click Me</a>\n"
+       f1 = 2
+   else:
+       print("out of bound")
+       f1 = 4
+   if f1 < 3 :
     for i in range(w, n):
         u_id = int(i)
         m = await client.get_messages(user_id, u_id)
@@ -108,7 +147,7 @@ async def sortfor2_f(client, message):
     for i,j in zip(name,doc):
      if i.lower().endswith(".mkv"):
       for ut in sort_id2:
-       await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\nMuxed English Subtitles\nPlay it via external player</b>")
+       await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 + "\nPlay it via external player</b>")
        await asyncio.sleep(3)
      if i.lower().endswith(".mp4"):
       for ut in sort_id2:
