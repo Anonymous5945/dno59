@@ -13,8 +13,8 @@ import os
 from tobrot import (
     DOWNLOAD_LOCATION,
     MAX_MESSAGE_LENGTH,
-    user_ids1,
-    user_ids2
+    chan_ids,
+    name_ids
 )
 
 import asyncio
@@ -25,4 +25,4 @@ from pyrogram.types import (
     ReplyKeyboardMarkup
 )
 
-async def kdg1_f(client, message):
+async def autofor_f(client, message):
