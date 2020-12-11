@@ -15,7 +15,7 @@ from telegraph import Telegraph
 from tobrot import (
     DOWNLOAD_LOCATION,
     MAX_MESSAGE_LENGTH,
-    chan_ids1
+    chan_ids1,
     chan_ids2
 )
 
