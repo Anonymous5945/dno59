@@ -65,13 +65,16 @@ async def autofor_f(client, message):
              h=l.lower()
              b=m.document.file_name.lower()
              if re.search(h,b):
-              await client.send_document(message.chat.id,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m2 + m1 + m3 +"</b>")
-              await asyncio.sleep(3)
+              for ut in chan_ids2:
+               await client.send_document(ut,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m2 + m1 + m3 +"</b>")
+               await asyncio.sleep(3)
          elif m.document.file_name[:5].lower() == "[d&o]":
            for l , s in zip(names,chan_ids):
              h=l.lower()
              b=m.document.file_name.lower()
              if re.search(h,b):
-              await client.send_document(message.chat.id,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m2 + m1 + m3 +"</b>")
-              await asyncio.sleep(3)
+              for ut in chan_ids1:
+               T= m.document.file_name.split(".mkv")[0]
+               await client.send_document(ut,m.document.file_id, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>Join: " + s + "\n\n" + m2 + m1 + m3 +"</b>")
+               await asyncio.sleep(3)
     await status_message.edit("Finish !!!")
