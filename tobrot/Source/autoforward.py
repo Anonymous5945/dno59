@@ -14,7 +14,9 @@ from tobrot import (
     DOWNLOAD_LOCATION,
     MAX_MESSAGE_LENGTH,
     chan_ids,
-    name_ids
+    name_ids,
+    chan_ids1,
+    chan_ids2
 )
 
 import asyncio
