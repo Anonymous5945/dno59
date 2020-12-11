@@ -28,3 +28,30 @@ from pyrogram.types import (
 )
 
 async def autofor_f(client, message):
+    status_message = await message.reply_text("Processing ...")
+    names =["Sweet.Home","Cheat.On.Me.If.You.Can","The.Goddess.Of.Revenge","True.Beauty","Please.Dont.Date.Him","A.Love.So.Beautiful","Royal.Secret.Agent","Run.On","Hush","Awaken","Lovestruck.In.The.City","Live.On","The.Uncanny.Counter","Mr.Queen","Sunbae.Dont.Put.On.That.Lipstick"]
+    chan_ids= ["@SweetHomeNetflix","@cheatonmeifyoucan","@the_goddess_of_revenge_drama","@true_beauty_drama","@Pleasedontdatehim","@a_love_so_beautiful_drama","@royalsecretagent","@runonkdrama2020","@hushkdrama","@awakenkdrama","@lovestruck_in_the_city_drama","@LiveOnkdrama2020","@the_uncanny_counter_kdrama","@Mr_Queen_Drama","@SunbaeDontPutOnthatLipstick"]
+    n=message.message_id
+    w=message.reply_to_message.message_id
+    user_id = message.chat.id
+    user_id = message.chat.id
+    m1 = f"Use <a href='https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad'>Mxplayer</a> , <a href='https://play.google.com/store/apps/details?id=org.videolan.vlc'>VLC</a> , <a href='https://t.me/xplayerpro'>Xplayer</a> [android] or <a href='https://apps.apple.com/us/app/infuse-6/id1136220934'>Infuse</a> , <a href='https://apps.apple.com/us/app/nplayer/id1116905928'>nPlayer </a> , <a href='https://apps.apple.com/us/app/nplayer-lite/id1078835991'>nPlayer Lite</a>  [ios] to see subs"
+    for i in range(w, n):
+        u_id = int(i)
+        m = await client.get_messages(user_id, u_id)
+        if m.media and m.document and m.document.file_name.lower().endswith(".mkv"):
+         if m.document.file_name[:9].lower() == "@dramaost":
+           for l , s in zip(names,chan_ids):
+             h=l.lower()
+             b=m.document.file_name.lower()
+             if re.search(h,b):
+              await client.send_document(message.chat.id,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m1 +"</b>")
+              await asyncio.sleep(3)
+         elif m.document.file_name[:5].lower() == "[d&o]":
+           for l , s in zip(names,chan_ids):
+             h=l.lower()
+             b=m.document.file_name.lower()
+             if re.search(h,b):
+              await client.send_document(message.chat.id,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m1 +"</b>")
+              await asyncio.sleep(3)
+    await status_message.edit("Finish !!!")
