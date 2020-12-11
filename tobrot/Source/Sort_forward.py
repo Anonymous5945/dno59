@@ -10,6 +10,7 @@ LOGGER = logging.getLogger(__name__)
 import os
 import re
 from telegraph import Telegraph
+import shlex
 from tobrot import (
     DOWNLOAD_LOCATION,
     MAX_MESSAGE_LENGTH,
