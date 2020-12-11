@@ -30,26 +30,39 @@ async def sortfor_f(client, message):
     user_id = message.chat.id
     a=[]
     b=[]
+    o=[]
+    p=[]
     for i in range(w, n):
         u_id = int(i)
         m = await client.get_messages(user_id, u_id)
-        if m.media and m.document and m.document.file_name.lower().endswith(".mkv"):
+        if m.media and m.document and m.document.file_name.lower().endswith(".mp4"):
          j = m.document.file_name
-         h = m.message_id
+         h = m.document.file_id
          a.append(j)
          b.append(h)
+        if m.media and m.document and m.document.file_name.lower().endswith(".mkv"):
+         s = m.document.file_name
+         r = m.document.file_id
+         o.append(s)
+         p.append(r)
     h = [(a[i], b[i]) for i in range(0, len(a))]
     n = len(h) 
     for i in range(n): 
         for j in range(n-i-1):
              if h[j][0] > h[j + 1][0]:
-                 h[j], h[j + 1] = h[j + 1], h[j]
+                h[j], h[j + 1] = h[j + 1], h[j]
+    k = [(o[i], p[i]) for i in range(0, len(o))]
+    n = len(k) 
+    for i in range(n): 
+         for j in range(n-i-1):
+             if k[j][0] > k[j + 1][0]:
+                 K[j], k[j + 1] = k[j + 1], k[j]
+    h.extend(k)
     name , doc = zip(*h)
     for i,j in zip(name,doc):
-       for ut in sort_id:
-         await client.forward_messages(
-      chat_id=ut,
-      from_chat_id=message.chat.id,
-      message_ids = j,
-      as_copy=True)
-         await asyncio.sleep(3)
+     if i.lower().endswith(".mkv"):
+      await client.send_document(message.chat.id,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\nMuxed English Subtitles\n\nPlay it via external player</b>")
+      await asyncio.sleep(3)
+     if i.lower().endswith(".mp4"):
+      await client.send_document(message.chat.id,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
+      await asyncio.sleep(3)
