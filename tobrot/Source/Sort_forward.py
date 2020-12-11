@@ -81,14 +81,15 @@ async def sortfor1_f(client, message):
     h.extend(k)
     name , doc = zip(*h)
     for i,j in zip(name,doc):
-     if i.lower().endswith(".mkv"):
-      for ut in sort_id1:
-       await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 +"\nPlay it via external player</b>")
-       await asyncio.sleep(3)
-     if i.lower().endswith(".mp4"):
-      for ut in sort_id1:
-       await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
-       await asyncio.sleep(3)
+     if i[:3].lower() == "kdg":
+      if i.lower().endswith(".mkv"):
+       for ut in sort_id1:
+        await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 +"\nPlay it via external player</b>")
+        await asyncio.sleep(3)
+      if i.lower().endswith(".mp4"):
+       for ut in sort_id1:
+        await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
+        await asyncio.sleep(3)
 async def sortfor2_f(client, message):
    n=message.message_id
    w=message.reply_to_message.message_id
@@ -145,11 +146,12 @@ async def sortfor2_f(client, message):
     h.extend(k)
     name , doc = zip(*h)
     for i,j in zip(name,doc):
-     if i.lower().endswith(".mkv"):
-      for ut in sort_id2:
-       await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 + "\nPlay it via external player</b>")
-       await asyncio.sleep(3)
-     if i.lower().endswith(".mp4"):
-      for ut in sort_id2:
-       await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
-       await asyncio.sleep(3)
+     if i[:3].lower() == "kdg":
+      if i.lower().endswith(".mkv"):
+       for ut in sort_id2:
+        await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 + "\nPlay it via external player</b>")
+        await asyncio.sleep(3)
+      if i.lower().endswith(".mp4"):
+       for ut in sort_id2:
+        await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
+        await asyncio.sleep(3)
