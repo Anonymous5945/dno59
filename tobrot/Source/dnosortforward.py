@@ -27,6 +27,7 @@ from pyrogram.types import (
 )
 
 async def dnosortfor1_f(client, message):
+    status_message = await message.reply_text("Processing ...")
     m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To see Subtitles</a>\n\n"
     m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a>"
     n=message.message_id
@@ -82,8 +83,10 @@ async def dnosortfor1_f(client, message):
          T=i.split(".mkv")[0]
          await client.send_document(ut,j, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>" + m2 + m1 + m3 + "</b>")
          await asyncio.sleep(3)
+    await status_message.edit("Finish !!!")
 
 async def dnosortfor2_f(client, message):
+    status_message = await message.reply_text("Processing ...")
     m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To see Subtitles</a>\n\n"
     m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a>"
     n=message.message_id
@@ -139,3 +142,4 @@ async def dnosortfor2_f(client, message):
          T=i.split(".mkv")[0]
          await client.send_document(ut,j, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>" + m2 + m1 + m3 + "</b>")
          await asyncio.sleep(3)
+    await status_message.edit("Finish !!!")
