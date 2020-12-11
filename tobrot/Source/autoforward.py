@@ -35,7 +35,8 @@ async def autofor_f(client, message):
     w=message.reply_to_message.message_id
     user_id = message.chat.id
     user_id = message.chat.id
-    m1 = f"Use <a href='https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad'>Mxplayer</a> , <a href='https://play.google.com/store/apps/details?id=org.videolan.vlc'>VLC</a> , <a href='https://t.me/xplayerpro'>Xplayer</a> [android] or <a href='https://apps.apple.com/us/app/infuse-6/id1136220934'>Infuse</a> , <a href='https://apps.apple.com/us/app/nplayer/id1116905928'>nPlayer </a> , <a href='https://apps.apple.com/us/app/nplayer-lite/id1078835991'>nPlayer Lite</a>  [ios] to see subs"
+    m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To see Subtitles</a>\n\n"
+    m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a>"
     for i in range(w, n):
         u_id = int(i)
         m = await client.get_messages(user_id, u_id)
