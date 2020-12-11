@@ -26,6 +26,7 @@ from pyrogram.types import (
 )
 
 async def sortfor1_f(client, message):
+   status_message = await message.reply_text("Processing ...")
    n=message.message_id
    w=message.reply_to_message.message_id
    user_id = message.chat.id
@@ -90,7 +91,9 @@ async def sortfor1_f(client, message):
        for ut in sort_id1:
         await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
         await asyncio.sleep(3)
+   await status_message.edit("Finish !!!")
 async def sortfor2_f(client, message):
+   status_message = await message.reply_text("Processing ...")
    n=message.message_id
    w=message.reply_to_message.message_id
    user_id = message.chat.id
@@ -155,3 +158,4 @@ async def sortfor2_f(client, message):
        for ut in sort_id2:
         await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
         await asyncio.sleep(3)
+   await status_message.edit("Finish !!!")
