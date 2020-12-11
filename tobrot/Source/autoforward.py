@@ -37,7 +37,26 @@ async def autofor_f(client, message):
     user_id = message.chat.id
     m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To see Subtitles</a>\n\n"
     m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a>"
-    for i in range(w, n):
+    url_parts = shlex.split(message.text)
+    if len(url_parts) == 1:
+       f1= 1
+       m2 = ""
+    elif len(url_parts) == 2:
+       n1 = url_parts[1]
+       telegraph = Telegraph()
+       telegraph.create_account(short_name='1337')
+       response = telegraph.create_page(
+         "Muxed Subtitles",
+         html_content="Muxed Subtitles : " + n1
+         )
+       file_context= 'https://telegra.ph/{}'.format(response['path'])
+       m2 =f"* <a href={file_context}>Available Muxed Subtitles</a>\n"
+       f1 = 2
+    else:
+       print("out of bound")
+       f1 = 4
+    if f1 < 3 :
+     for i in range(w, n):
         u_id = int(i)
         m = await client.get_messages(user_id, u_id)
         if m.media and m.document and m.document.file_name.lower().endswith(".mkv"):
@@ -46,13 +65,13 @@ async def autofor_f(client, message):
              h=l.lower()
              b=m.document.file_name.lower()
              if re.search(h,b):
-              await client.send_document(message.chat.id,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m1 +"</b>")
+              await client.send_document(message.chat.id,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m2 + m1 + m3 +"</b>")
               await asyncio.sleep(3)
          elif m.document.file_name[:5].lower() == "[d&o]":
            for l , s in zip(names,chan_ids):
              h=l.lower()
              b=m.document.file_name.lower()
              if re.search(h,b):
-              await client.send_document(message.chat.id,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m1 +"</b>")
+              await client.send_document(message.chat.id,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m2 + m1 + m3 +"</b>")
               await asyncio.sleep(3)
     await status_message.edit("Finish !!!")
