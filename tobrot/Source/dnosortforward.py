@@ -27,7 +27,7 @@ from pyrogram.types import (
 )
 
 async def dnosortfor1_f(client, message):
-    m1 = f"Use:\n[android] <a href='https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad'>Mxplayer</a> , <a href='https://play.google.com/store/apps/details?id=org.videolan.vlc'>VLC</a> , <a href='https://t.me/xplayerpro'>Xplayer</a>\n[ios] <a href='https://apps.apple.com/us/app/infuse-6/id1136220934'>Infuse</a> , <a href='https://apps.apple.com/us/app/nplayer/id1116905928'>nPlayer</a> , <a href='https://apps.apple.com/us/app/nplayer-lite/id1078835991'>nPlayer Lite</a>\n[PC] <a href='https://potplayer.daum.net/'>Potplayer</a> , <a href='http://en.kmplayer.com/'>Kmplayer</a> , <a href='https://www.videolan.org/index.html'>VLC</a> to see subs"
+    m1 = f"To see subs, Use:\n[android] <a href='https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad'>Mxplayer</a> , <a href='https://play.google.com/store/apps/details?id=org.videolan.vlc'>VLC</a> , <a href='https://t.me/xplayerpro'>Xplayer</a>\n[ios] <a href='https://apps.apple.com/us/app/infuse-6/id1136220934'>Infuse</a> , <a href='https://apps.apple.com/us/app/nplayer/id1116905928'>nPlayer</a> , <a href='https://apps.apple.com/us/app/nplayer-lite/id1078835991'>nPlayer Lite</a>\n[PC] <a href='https://potplayer.daum.net/'>Potplayer</a> , <a href='http://en.kmplayer.com/'>Kmplayer</a> , <a href='https://www.videolan.org/index.html'>VLC</a>"
     n=message.message_id
     w=message.reply_to_message.message_id
     user_id = message.chat.id
@@ -47,7 +47,7 @@ async def dnosortfor1_f(client, message):
          html_content="Muxed Subtitles : " + n1
          )
        file_context= 'https://telegra.ph/{}'.format(response['path'])
-       m2 =f"Muxed Subtitles : <a href={file_context}>Click Me</a>\n\n"
+       m2 =f"<a href={file_context}>Muxed Subtitles</a>\n\n"
        f1 = 2
     else:
        print("out of bound")
