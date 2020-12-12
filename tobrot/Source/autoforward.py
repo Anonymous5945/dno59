@@ -31,6 +31,7 @@ from pyrogram.types import (
 
 async def autofor_f(client, message):
     status_message = await message.reply_text("Processing ...")
+    m1 = f"     <a href='https://telegra.ph/External-Players-12-12-6'>🎃 External Players 🎃</a>/n/n"
     names =["Sweet.Home","Cheat.On.Me.If.You.Can","The.Goddess.Of.Revenge","True.Beauty","Please.Dont.Date.Him","A.Love.So.Beautiful","Royal.Secret.Agent","Run.On","Hush","Awaken","Lovestruck.In.The.City","Live.On","The.Uncanny.Counter","Mr.Queen","Sunbae.Dont.Put.On.That.Lipstick"]
     chan_ids= ["@SweetHomeNetflix","@cheatonmeifyoucan","@the_goddess_of_revenge_drama","@true_beauty_drama","@Pleasedontdatehim","@a_love_so_beautiful_drama","@royalsecretagent","@runonkdrama2020","@hushkdrama","@awakenkdrama","@lovestruck_in_the_city_drama","@LiveOnkdrama2020","@the_uncanny_counter_kdrama","@Mr_Queen_Drama","@SunbaeDontPutOnthatLipstick"]
     n=message.message_id
@@ -67,7 +68,7 @@ async def autofor_f(client, message):
              b=m.document.file_name.lower()
              if re.search(h,b):
               for ut in chan_ids1:
-               await client.send_document(ut,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m2 + m3 +"</b>")
+               await client.send_document(ut,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m2 + m1 + m3 +"</b>")
                await asyncio.sleep(3)
          elif m.document.file_name[:5].lower() == "[d&o]":
            for l , s in zip(names,chan_ids):
@@ -76,6 +77,6 @@ async def autofor_f(client, message):
              if re.search(h,b):
               for ut in chan_ids1:
                T= m.document.file_name.split(".mkv")[0]
-               await client.send_document(ut,m.document.file_id, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>Join: " + s + "\n\n" + m2 + m3 +"</b>")
+               await client.send_document(ut,m.document.file_id, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>Join: " + s + "\n\n" + m2 + m1 + m3 +"</b>")
                await asyncio.sleep(3)
     await status_message.edit("Finish !!!")
