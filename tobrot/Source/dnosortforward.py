@@ -54,7 +54,7 @@ async def dnosortfor1_f(client, message):
        f1 = 2
        m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To View Subtitles</a>\n\n"
     else:
-       print("out of bound")
+       await status_message.edit("out of bound")
        f1 = 4
     if f1 < 3 :
      for i in range(w, n):
@@ -114,7 +114,7 @@ async def dnosortfor2_f(client, message):
        f1 = 2
        m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To View Subtitles</a>\n\n"
     else:
-       print("out of bound")
+       await status_message.edit("out of bound")
        f1 = 4
     if f1 < 3 :
      for i in range(w, n):
