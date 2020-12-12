@@ -36,8 +36,6 @@ async def sortfor1_f(client, message):
    b=[]
    o=[]
    p=[]
-   h=[]
-   k=[]
    url_parts = shlex.split(message.text)
    if len(url_parts) == 1:
        f1= 1
