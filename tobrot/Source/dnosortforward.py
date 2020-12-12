@@ -29,7 +29,7 @@ from pyrogram.types import (
 async def dnosortfor1_f(client, message):
     status_message = await message.reply_text("Processing ...")
     m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To see Subtitles</a>\n\n"
-    m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a>"
+    m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a> | <a href='http://t.me/TeamDnO'>D&O</a>"
     n=message.message_id
     w=message.reply_to_message.message_id
     user_id = message.chat.id
@@ -88,7 +88,7 @@ async def dnosortfor1_f(client, message):
 async def dnosortfor2_f(client, message):
     status_message = await message.reply_text("Processing ...")
     m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To see Subtitles</a>\n\n"
-    m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a>"
+    m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a> | <a href='http://t.me/TeamDnO'>D&O</a>"
     n=message.message_id
     w=message.reply_to_message.message_id
     user_id = message.chat.id
