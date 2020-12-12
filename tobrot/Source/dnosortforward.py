@@ -28,7 +28,7 @@ from pyrogram.types import (
 
 async def dnosortfor1_f(client, message):
     status_message = await message.reply_text("Processing ...")
-    m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To see Subtitles</a>\n\n"
+    
     m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a> | <a href='http://t.me/TeamDnO'>D&O</a>"
     n=message.message_id
     w=message.reply_to_message.message_id
@@ -40,6 +40,7 @@ async def dnosortfor1_f(client, message):
     if len(url_parts) == 1:
        f1= 1
        m2 = ""
+       m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To View English Subtitle</a>\n\n"
     elif len(url_parts) == 2:
        n1 = url_parts[1]
        telegraph = Telegraph()
@@ -51,6 +52,7 @@ async def dnosortfor1_f(client, message):
        file_context= 'https://telegra.ph/{}'.format(response['path'])
        m2 =f"* <a href={file_context}>Available Muxed Subtitles</a>\n"
        f1 = 2
+       m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To View Subtitles</a>\n\n"
     else:
        print("out of bound")
        f1 = 4
@@ -87,7 +89,6 @@ async def dnosortfor1_f(client, message):
 
 async def dnosortfor2_f(client, message):
     status_message = await message.reply_text("Processing ...")
-    m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To see Subtitles</a>\n\n"
     m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a> | <a href='http://t.me/TeamDnO'>D&O</a>"
     n=message.message_id
     w=message.reply_to_message.message_id
@@ -99,6 +100,7 @@ async def dnosortfor2_f(client, message):
     if len(url_parts) == 1:
        f1= 1
        m2 = ""
+       m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To View English Subtitles</a>\n\n"
     elif len(url_parts) == 2:
        n1 = url_parts[1]
        telegraph = Telegraph()
@@ -110,6 +112,7 @@ async def dnosortfor2_f(client, message):
        file_context= 'https://telegra.ph/{}'.format(response['path'])
        m2 =f"* <a href={file_context}>Available Muxed Subtitles</a>\n"
        f1 = 2
+       m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To View Subtitles</a>\n\n"
     else:
        print("out of bound")
        f1 = 4
