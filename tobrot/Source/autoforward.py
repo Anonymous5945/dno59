@@ -69,7 +69,7 @@ async def autofor_f(client, message):
                await client.send_document(ut,m.document.file_id, caption= m.document.file_name + "\n\n<b>Join: " + s + "\n\n" + m2 + m1 + m3 +"</b>")
                await asyncio.sleep(3)
          elif m.document.file_name[:5].lower() == "[d&o]":
-           for l , s in zip(names,chan_ids):
+           for l , s in zip(name_ids,chan_ids):
              h=l.lower()
              b=m.document.file_name.lower()
              if re.search(h,b):
