@@ -36,6 +36,8 @@ async def sortfor1_f(client, message):
    b=[]
    o=[]
    p=[]
+   h=[]
+   k=[]
    url_parts = shlex.split(message.text)
    if len(url_parts) == 1:
        f1= 1
@@ -68,31 +70,35 @@ async def sortfor1_f(client, message):
          r = m.document.file_id
          o.append(s)
          p.append(r)
-    h = [(a[i], b[i]) for i in range(0, len(a))]
-    n = len(h) 
-    for i in range(n): 
+    if len(a) != 0:
+     h = [(a[i], b[i]) for i in range(0, len(a))]
+     n = len(h) 
+     for i in range(n): 
         for j in range(n-i-1):
              if h[j][0] > h[j + 1][0]:
                 h[j], h[j + 1] = h[j + 1], h[j]
-    k = [(o[i], p[i]) for i in range(0, len(o))]
-    n = len(k) 
-    for i in range(n): 
+    if len(o) != 0:
+     k = [(o[i], p[i]) for i in range(0, len(o))]
+     n = len(k) 
+     for i in range(n): 
          for j in range(n-i-1):
              if k[j][0] > k[j + 1][0]:
                  K[j], k[j + 1] = k[j + 1], k[j]
     h.extend(k)
-    name , doc = zip(*h)
-    for i,j in zip(name,doc):
-     if i[:3].lower() == "kdg":
-      if i.lower().endswith(".mkv"):
-       for ut in chan_ids1:
-        await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 +"\nPlay it via external player</b>")
-        await asyncio.sleep(3)
-      if i.lower().endswith(".mp4"):
-       for ut in chan_ids1:
-        await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
-        await asyncio.sleep(3)
+    if len(h) != 0:
+     name , doc = zip(*h)
+     for i,j in zip(name,doc):
+      if i[:3].lower() == "kdg":
+       if i.lower().endswith(".mkv"):
+        for ut in chan_ids1:
+         await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 +"\nPlay it via external player</b>")
+         await asyncio.sleep(3)
+       if i.lower().endswith(".mp4"):
+        for ut in chan_ids1:
+         await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
+         await asyncio.sleep(3)
    await status_message.edit("Finish !!!")
+
 async def sortfor2_f(client, message):
    status_message = await message.reply_text("Processing ...")
    n=message.message_id
@@ -103,6 +109,8 @@ async def sortfor2_f(client, message):
    b=[]
    o=[]
    p=[]
+   h=[]
+   k=[]
    url_parts = shlex.split(message.text)
    if len(url_parts) == 1:
        f1= 1
@@ -135,28 +143,31 @@ async def sortfor2_f(client, message):
          r = m.document.file_id
          o.append(s)
          p.append(r)
-    h = [(a[i], b[i]) for i in range(0, len(a))]
-    n = len(h) 
-    for i in range(n): 
+    if len(a) != 0:
+     h = [(a[i], b[i]) for i in range(0, len(a))]
+     n = len(h) 
+     for i in range(n): 
         for j in range(n-i-1):
              if h[j][0] > h[j + 1][0]:
                 h[j], h[j + 1] = h[j + 1], h[j]
-    k = [(o[i], p[i]) for i in range(0, len(o))]
-    n = len(k) 
-    for i in range(n): 
+    if len(o) != 0:
+     k = [(o[i], p[i]) for i in range(0, len(o))]
+     n = len(k) 
+     for i in range(n): 
          for j in range(n-i-1):
              if k[j][0] > k[j + 1][0]:
                  K[j], k[j + 1] = k[j + 1], k[j]
     h.extend(k)
-    name , doc = zip(*h)
-    for i,j in zip(name,doc):
-     if i[:3].lower() == "kdg":
-      if i.lower().endswith(".mkv"):
-       for ut in chan_ids2:
-        await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 + "\nPlay it via external player</b>")
-        await asyncio.sleep(3)
-      if i.lower().endswith(".mp4"):
-       for ut in chan_ids2:
-        await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
-        await asyncio.sleep(3)
+    if len(h) != 0:
+     name , doc = zip(*h)
+     for i,j in zip(name,doc):
+      if i[:3].lower() == "kdg":
+       if i.lower().endswith(".mkv"):
+        for ut in chan_ids2:
+         await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 + "\nPlay it via external player</b>")
+         await asyncio.sleep(3)
+       if i.lower().endswith(".mp4"):
+        for ut in chan_ids2:
+         await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
+         await asyncio.sleep(3)
    await status_message.edit("Finish !!!")
