@@ -8,7 +8,7 @@ class Config(object):
     API_HASH = os.environ.get("API_HASH")
     # Get these values from my.telegram.org
     # to store the channel ID who are authorized to use the bot
-    chan_ids = set(int(x) for x in os.environ.get("chan_ids", "").split())
+    chan_ids = set(x for x in os.environ.get("chan_ids", "").split())
     chan_ids1 = set(int(x) for x in os.environ.get("chan_ids1", "").split())
     chan_ids2 = set(int(x) for x in os.environ.get("chan_ids2", "").split())
     name_ids = set(int(x) for x in os.environ.get("name_ids", "").split())
