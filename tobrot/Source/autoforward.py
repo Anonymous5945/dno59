@@ -51,7 +51,7 @@ async def autofor_f(client, message):
          html_content="Muxed Subtitles : " + n1
          )
        file_context= 'https://telegra.ph/{}'.format(response['path'])
-       m2 =f"<a href={file_context}>🍁 Muxed English Subtitle 🍁</a>\n"
+       m2 =f"<a href={file_context}>🍁 Muxed English Subtitle 🍁</a>\n\n"
        f1 = 2
     else:
        await status_message.edit("out of bound")
