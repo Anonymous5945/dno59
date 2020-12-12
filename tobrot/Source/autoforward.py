@@ -38,7 +38,7 @@ async def autofor_f(client, message):
     user_id = message.chat.id
     user_id = message.chat.id
     m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To see Subtitles</a>\n\n"
-    m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a>"
+    m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a> | <a href='http://t.me/TeamDnO'>D&O</a>"
     url_parts = shlex.split(message.text)
     if len(url_parts) == 1:
        f1= 1
