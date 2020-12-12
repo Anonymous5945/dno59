@@ -61,7 +61,7 @@ async def autofor_f(client, message):
         m = await client.get_messages(user_id, u_id)
         if m.media and m.document and m.document.file_name.lower().endswith(".mkv"):
          if m.document.file_name[:9].lower() == "@dramaost":
-           for l , s in zip(names,chan_ids):
+           for l , s in zip(name_ids,chan_ids):
              h=l.lower()
              b=m.document.file_name.lower()
              if re.search(h,b):
