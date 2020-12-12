@@ -35,7 +35,15 @@
     },
     "chan_ids": {
       "description": "should be an integer. The BOT API ID of the Telegram Group, where the Leecher should work.",
-      "value": ""
+      "value": "@Mr_Queen_Drama @the_uncanny_counter_kdrama @LiveOnkdrama2020 @lovestruck_in_the_city_drama @awakenkdrama @hushkdrama @run_on_drama @Royal_Secret_Inspector @a_love_so_beautiful_drama @Please_Dont_Date_Him @true_beauty_drama @penthouse_drama @the_goddess_of_revenge @cheatonmeifyoucan @SweetHomeNetflix"
+    },
+    "chan_ids1": {
+      "description": "should be an integer. the bot api id of the telegram group, where the leecher should work.",
+      "value": "-1001139792623 -1001442843019"
+    },
+    "chan_ids2": {
+      "description": "should be an integer. The BOT API ID of the Telegram Group, where the Leecher should work.",
+      "value": "-1001343951559"
     },
     "name_ids": {
       "description": "should be an integer. The BOT API ID of the Telegram Group, where the Leecher should work.",
