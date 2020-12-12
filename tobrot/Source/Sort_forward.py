@@ -14,8 +14,8 @@ import shlex
 from tobrot import (
     DOWNLOAD_LOCATION,
     MAX_MESSAGE_LENGTH,
-    chan_ids1,
-    chan_ids2
+    chan_ids3,
+    chan_ids4
 )
 
 import asyncio
@@ -52,7 +52,7 @@ async def sortfor1_f(client, message):
        m2 =f"Muxed Subtitles : <a href={file_context}>Click Me</a>\n"
        f1 = 2
    else:
-       print("out of bound")
+       await status_message.edit("out of bound")
        f1 = 4
    if f1 < 3 :
     for i in range(w, n):
@@ -88,11 +88,11 @@ async def sortfor1_f(client, message):
      for i,j in zip(name,doc):
       if i[:3].lower() == "kdg":
        if i.lower().endswith(".mkv"):
-        for ut in chan_ids1:
+        for ut in chan_ids3:
          await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 +"\nPlay it via external player</b>")
          await asyncio.sleep(3)
        if i.lower().endswith(".mp4"):
-        for ut in chan_ids1:
+        for ut in chan_ids3:
          await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
          await asyncio.sleep(3)
    await status_message.edit("Finish !!!")
@@ -125,7 +125,7 @@ async def sortfor2_f(client, message):
        m2 =f"Muxed Subtitles : <a href={file_context}>Click Me</a>\n"
        f1 = 2
    else:
-       print("out of bound")
+       await status_message.edit("out of bound")
        f1 = 4
    if f1 < 3 :
     for i in range(w, n):
@@ -161,11 +161,11 @@ async def sortfor2_f(client, message):
      for i,j in zip(name,doc):
       if i[:3].lower() == "kdg":
        if i.lower().endswith(".mkv"):
-        for ut in chan_ids2:
+        for ut in chan_ids4:
          await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles\n\n" + m2 + "\nPlay it via external player</b>")
          await asyncio.sleep(3)
        if i.lower().endswith(".mp4"):
-        for ut in chan_ids2:
+        for ut in chan_ids4:
          await client.send_document(ut,j, caption= "<b>" + i + "\n\n@kdg_166  @korea_drama\n@kdg166_ongoing @kdgfiles</b>")
          await asyncio.sleep(3)
    await status_message.edit("Finish !!!")
