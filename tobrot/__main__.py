@@ -21,7 +21,12 @@ from tobrot import (
     API_HASH,
     AUTH_CHANNEL,
     EXEC_CMD_TRIGGER,
-    Eval_CMD_TRIGGER
+    Eval_CMD_TRIGGER,
+    Dnosortfor2_CMD_TRIGGER,
+    Dnosortfor1_CMD_TRIGGER,
+    Sortfor1_CMD_TRIGGER,
+    Sortfor2_CMD_TRIGGER,
+    Autofor_CMD_TRIGGER
 )
 
 from pyrogram import (
