@@ -67,9 +67,9 @@ async def sortfor1_f(client, message):
          b.append(h)
         if m.media and m.document and m.document.file_name.lower().endswith(".mkv"):
          s = m.document.file_name
-         r = m.document.file_id
+         k = m.document.file_id
          o.append(s)
-         p.append(r)
+         p.append(k)
     if len(a) != 0:
      h = [(a[i], b[i]) for i in range(0, len(a))]
      n = len(h) 
@@ -140,9 +140,9 @@ async def sortfor2_f(client, message):
          b.append(h)
         if m.media and m.document and m.document.file_name.lower().endswith(".mkv"):
          s = m.document.file_name
-         r = m.document.file_id
+         k = m.document.file_id
          o.append(s)
-         p.append(r)
+         p.append(k)
     if len(a) != 0:
      h = [(a[i], b[i]) for i in range(0, len(a))]
      n = len(h) 
@@ -156,7 +156,7 @@ async def sortfor2_f(client, message):
      for i in range(n): 
          for j in range(n-i-1):
              if k[j][0] > k[j + 1][0]:
-                 K[j], k[j + 1] = k[j + 1], k[j]
+                 k[j], k[j + 1] = k[j + 1], k[j]
     h.extend(k)
     if len(h) != 0:
      name , doc = zip(*h)
