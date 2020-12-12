@@ -8,8 +8,10 @@ class Config(object):
     API_HASH = os.environ.get("API_HASH")
     # Get these values from my.telegram.org
     # to store the channel ID who are authorized to use the bot
-    chan_ids = set(int(x) for x in os.environ.get("user_ids1", "").split())
-    name_ids = set(int(x) for x in os.environ.get("user_ids2", "").split())
+    chan_ids = set(int(x) for x in os.environ.get("chan_ids", "").split())
+    chan_ids1 = set(int(x) for x in os.environ.get("chan_ids1", "").split())
+    chan_ids2 = set(int(x) for x in os.environ.get("chan_ids2", "").split())
+    name_ids = set(int(x) for x in os.environ.get("name_ids", "").split())
     AUTH_CHANNEL = set(int(x) for x in os.environ.get("AUTH_CHANNEL", "").split())
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = "./DOWNLOADS"
@@ -33,3 +35,8 @@ class Config(object):
     # Eval command
     Eval_CMD_TRIGGER = os.environ.get("Eval_CMD_TRIGGER", "eval")
     Fir_CMD_TRIGGER = os.environ.get("Fir_CMD_TRIGGER", "")
+    Sortfor1_CMD_TRIGGER = os.environ.get("Sortfor1_CMD_TRIGGER", "sort1")
+    Sortfor2_CMD_TRIGGER = os.environ.get("Sortfor2_CMD_TRIGGER", "sort2")
+    Dnosortfor1_CMD_TRIGGER = os.environ.get("Dnosortfor1_CMD_TRIGGER", "ds1")
+    Dnosortfor2_CMD_TRIGGER = os.environ.get("Dnosortfor2_CMD_TRIGGER", "ds2")
+    Autofor_CMD_TRIGGER = os.environ.get("Autofor_CMD_TRIGGER", "auto")
