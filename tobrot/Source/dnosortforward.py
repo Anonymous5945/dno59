@@ -28,7 +28,7 @@ from pyrogram.types import (
 
 async def dnosortfor1_f(client, message):
     status_message = await message.reply_text("Processing ...")
-    
+    m1 = f"     <a href='https://telegra.ph/External-Players-12-12-6'>🎃 External Players 🎃</a>/n/n"
     m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a> | <a href='http://t.me/TeamDnO'>D&O</a>"
     n=message.message_id
     w=message.reply_to_message.message_id
@@ -76,18 +76,19 @@ async def dnosortfor1_f(client, message):
        if i[:9].lower() == "@dramaost":
         
         for ut in chan_ids1:
-         await client.send_document(ut,j, caption= i + "\n\n<b>" + m2 + m3 + "</b>")
+         await client.send_document(ut,j, caption= i + "\n\n<b>" + m2 + m1 + m3 + "</b>")
          await asyncio.sleep(3)
        elif i[:5].lower() == "[d&o]":
         
         for ut in chan_ids1:
          T=i.split(".mkv")[0]
-         await client.send_document(ut,j, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>" + m2 + m3 + "</b>")
+         await client.send_document(ut,j, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>" + m2 + m1 + m3 + "</b>")
          await asyncio.sleep(3)
     await status_message.edit("Finish !!!")
 
 async def dnosortfor2_f(client, message):
     status_message = await message.reply_text("Processing ...")
+    m1 = f"     <a href='https://telegra.ph/External-Players-12-12-6'>🎃 External Players 🎃</a>/n/n"
     m3 = f"<a href='http://t.me/kdramaupdates'>Ongoing</a> | <a href='http://t.me/dramaindexchannel'>Index</a> | <a href='http://t.me/Korean_dramas_world'>Completed</a> | <a href='http://t.me/TeamDnO'>D&O</a>"
     n=message.message_id
     w=message.reply_to_message.message_id
@@ -134,12 +135,12 @@ async def dnosortfor2_f(client, message):
        if i[:9].lower() == "@dramaost":
         
         for ut in chan_ids2:
-         await client.send_document(ut,j, caption= i + "\n\n<b>" + m2 +  m3 +"</b>")
+         await client.send_document(ut,j, caption= i + "\n\n<b>" + m2 + m1 + m3 +"</b>")
          await asyncio.sleep(3)
        elif i[:5].lower() == "[d&o]":
         
         for ut in chan_ids2:
          T=i.split(".mkv")[0]
-         await client.send_document(ut,j, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>" + m2 + m3 + "</b>")
+         await client.send_document(ut,j, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>" + m2 + m1 + m3 + "</b>")
          await asyncio.sleep(3)
     await status_message.edit("Finish !!!")
