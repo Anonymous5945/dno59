@@ -11,7 +11,7 @@ class Config(object):
     chan_ids = set(x for x in os.environ.get("chan_ids", "").split())
     chan_ids1 = set(int(x) for x in os.environ.get("chan_ids1", "").split())
     chan_ids2 = set(int(x) for x in os.environ.get("chan_ids2", "").split())
-    name_ids = set(int(x) for x in os.environ.get("name_ids", "").split())
+    name_ids = set(x for x in os.environ.get("name_ids", "").split())
     AUTH_CHANNEL = set(int(x) for x in os.environ.get("AUTH_CHANNEL", "").split())
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = "./DOWNLOADS"
