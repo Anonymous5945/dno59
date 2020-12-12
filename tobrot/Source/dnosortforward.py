@@ -39,8 +39,7 @@ async def dnosortfor1_f(client, message):
     url_parts = shlex.split(message.text)
     if len(url_parts) == 1:
        f1= 1
-       m2 = ""
-       m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To View English Subtitle</a>\n\n"
+       m2 = f"🍁 Muxed English Subtitle 🍁\n\n"
     elif len(url_parts) == 2:
        n1 = url_parts[1]
        telegraph = Telegraph()
@@ -50,9 +49,9 @@ async def dnosortfor1_f(client, message):
          html_content="Muxed Subtitles : " + n1
          )
        file_context= 'https://telegra.ph/{}'.format(response['path'])
-       m2 =f"* <a href={file_context}>Available Muxed Subtitles</a>\n"
+       m2 =f"<a href={file_context}>🍁 Muxed English Subtitle 🍁</a>\n\n"
        f1 = 2
-       m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To View Subtitles</a>\n\n"
+ 
     else:
        await status_message.edit("out of bound")
        f1 = 4
@@ -77,13 +76,13 @@ async def dnosortfor1_f(client, message):
        if i[:9].lower() == "@dramaost":
         
         for ut in chan_ids1:
-         await client.send_document(ut,j, caption= i + "\n\n<b>" + m2 + m1 + m3 + "</b>")
+         await client.send_document(ut,j, caption= i + "\n\n<b>" + m2 + m3 + "</b>")
          await asyncio.sleep(3)
        elif i[:5].lower() == "[d&o]":
         
         for ut in chan_ids1:
          T=i.split(".mkv")[0]
-         await client.send_document(ut,j, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>" + m2 + m1 + m3 + "</b>")
+         await client.send_document(ut,j, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>" + m2 + m3 + "</b>")
          await asyncio.sleep(3)
     await status_message.edit("Finish !!!")
 
@@ -99,8 +98,7 @@ async def dnosortfor2_f(client, message):
     url_parts = shlex.split(message.text)
     if len(url_parts) == 1:
        f1= 1
-       m2 = ""
-       m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To View English Subtitles</a>\n\n"
+       m2 = f"🍁 Muxed English Subtitle 🍁\n\n"
     elif len(url_parts) == 2:
        n1 = url_parts[1]
        telegraph = Telegraph()
@@ -110,9 +108,8 @@ async def dnosortfor2_f(client, message):
          html_content="Muxed Subtitles : " + n1
          )
        file_context= 'https://telegra.ph/{}'.format(response['path'])
-       m2 =f"* <a href={file_context}>Available Muxed Subtitles</a>\n"
+       m2 =f"* <a href={file_context}>🍁 Muxed English Subtitle 🍁</a>\n\n"
        f1 = 2
-       m1 = f"* <a href='https://telegra.ph/External-Players-12-11-4'>How To View Subtitles</a>\n\n"
     else:
        await status_message.edit("out of bound")
        f1 = 4
@@ -137,12 +134,12 @@ async def dnosortfor2_f(client, message):
        if i[:9].lower() == "@dramaost":
         
         for ut in chan_ids2:
-         await client.send_document(ut,j, caption= i + "\n\n<b>" + m2 + m1 + m3 +"</b>")
+         await client.send_document(ut,j, caption= i + "\n\n<b>" + m2 +  m3 +"</b>")
          await asyncio.sleep(3)
        elif i[:5].lower() == "[d&o]":
         
         for ut in chan_ids2:
          T=i.split(".mkv")[0]
-         await client.send_document(ut,j, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>" + m2 + m1 + m3 + "</b>")
+         await client.send_document(ut,j, caption= T + ".Enc'd.&.Upl'd.By.Team.D&O-@dramaOST.mkv" + "\n\n<b>" + m2 + m3 + "</b>")
          await asyncio.sleep(3)
     await status_message.edit("Finish !!!")
