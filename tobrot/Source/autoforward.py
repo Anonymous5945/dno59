@@ -32,8 +32,6 @@ from pyrogram.types import (
 async def autofor_f(client, message):
     status_message = await message.reply_text("Processing ...")
     m1 = f"     <a href='https://telegra.ph/External-Players-12-12-6'>🎃 External Players 🎃</a>\n\n"
-    names =["Sweet.Home","Cheat.On.Me.If.You.Can","The.Goddess.Of.Revenge","True.Beauty","Please.Dont.Date.Him","A.Love.So.Beautiful","Royal.Secret.Agent","Run.On","Hush","Awaken","Lovestruck.In.The.City","Live.On","The.Uncanny.Counter","Mr.Queen","Sunbae.Dont.Put.On.That.Lipstick"]
-    chan_ids= ["@SweetHomeNetflix","@cheatonmeifyoucan","@the_goddess_of_revenge_drama","@true_beauty_drama","@Pleasedontdatehim","@a_love_so_beautiful_drama","@royalsecretagent","@runonkdrama2020","@hushkdrama","@awakenkdrama","@lovestruck_in_the_city_drama","@LiveOnkdrama2020","@the_uncanny_counter_kdrama","@Mr_Queen_Drama","@SunbaeDontPutOnthatLipstick"]
     n=message.message_id
     w=message.reply_to_message.message_id
     user_id = message.chat.id
