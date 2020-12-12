@@ -33,6 +33,9 @@ from pyrogram.handlers import (
     CallbackQueryHandler
 )
 
+from tobrot.Source.Sort_forward import sortfor2_f , sortfor1_f
+from tobrot.Source.autoforward import autofor_f
+from tobrot.Source.dnosortforward import dnosortfor2_f , dnosortfor1_f
 
 from tobrot.plugins.status_message_fn import (
     exec_message_f,
@@ -64,5 +67,35 @@ if __name__ == "__main__" :
         filters=filters.command([Eval_CMD_TRIGGER]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(eval_message_handler)
+    #
+    sortfor1_message_handler = MessageHandler(
+        sortfor1_f,
+        filters=filters.command([Sortfor1_CMD_TRIGGER]) & filters.chat(chats=AUTH_CHANNEL)
+    )
+    app.add_handler(sortfor1_message_handler)
+    #
+    sortfor2_message_handler = MessageHandler(
+        sortfor2_f,
+        filters=filters.command([Sortfor2_CMD_TRIGGER]) & filters.chat(chats=AUTH_CHANNEL)
+    )
+    app.add_handler(sortfor2_message_handler)
+    #
+    autofor_message_handler = MessageHandler(
+        autofor_f,
+        filters=filters.command([Autofor_CMD_TRIGGER]) & filters.chat(chats=AUTH_CHANNEL)
+    )
+    app.add_handler(autofor_message_handler)
+    #
+    dnosortfor1_message_handler = MessageHandler(
+        dnosortfor1_f,
+        filters=filters.command([Dnosortfor1_CMD_TRIGGER]) & filters.chat(chats=AUTH_CHANNEL)
+    )
+    app.add_handler(dnosortfor1_message_handler)
+    #
+    dnosortfor2_message_handler = MessageHandler(
+        dnosortfor2_f,
+        filters=filters.command([Dnosortfor2_CMD_TRIGGER]) & filters.chat(chats=AUTH_CHANNEL)
+    )
+    app.add_handler(dnosortfor2_message_handler)
     #
     app.run()
