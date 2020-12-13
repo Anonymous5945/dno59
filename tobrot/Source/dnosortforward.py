@@ -49,7 +49,7 @@ async def dnosortfor1_f(client, message):
          html_content="Muxed Subtitles : " + n1
          )
        file_context= 'https://telegra.ph/{}'.format(response['path'])
-       m2 =f"<a href={file_context}>🍁 Muxed Multi Subtitle 🍁</a>\n\n"
+       m2 =f"<a href={file_context}>🍁 Muxed Multi Subtitles 🍁</a>\n\n"
        f1 = 2
  
     else:
@@ -109,7 +109,7 @@ async def dnosortfor2_f(client, message):
          html_content="Muxed Subtitles : " + n1
          )
        file_context= 'https://telegra.ph/{}'.format(response['path'])
-       m2 =f"<a href={file_context}>🍁 Muxed Multi Subtitle 🍁</a>\n\n"
+       m2 =f"<a href={file_context}>🍁 Muxed Multi Subtitles 🍁</a>\n\n"
        f1 = 2
     else:
        await status_message.edit("out of bound")
