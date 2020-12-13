@@ -19,9 +19,7 @@ AUTH_CHANNEL = Config.AUTH_CHANNEL
 AUTH_CHANNEL.add(-1001291580003)
 AUTH_CHANNEL = list(AUTH_CHANNEL)
 chan_ids = Config.chan_ids
-chan_ids = list(chan_ids)
 name_ids = Config.name_ids
-name_ids = list(name_ids)
 chan_ids1 = Config.chan_ids1
 chan_ids1 = list(chan_ids1)
 chan_ids2 = Config.chan_ids2
