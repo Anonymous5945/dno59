@@ -31,7 +31,7 @@ from pyrogram.types import (
 
 async def autofor_f(client, message):
     status_message = await message.reply_text("Processing ...")
-    m1 = f"     <a href='https://telegra.ph/External-Players-12-12-6'>🎃 External Players 🎃</a>\n\n"
+    m1 = f"<br><br><br>To See Subtitles Use:<br><br>[android] <a href='https://t.me/xplayerpro'>Xplayer</a> , <a href='https://play.google.com/store/apps/details?id=org.videolan.vlc'>VLC</a> , <a href='https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad'>Mxplayer</a><br>[ios] <a href='https://apps.apple.com/us/app/infuse-6/id1136220934'>Infuse</a> , <a href='https://apps.apple.com/us/app/nplayer/id1116905928'>nPlayer</a> , <a href='https://apps.apple.com/us/app/nplayer-lite/id1078835991'>nPlayer Lite</a><br>[PC] <a href='https://potplayer.daum.net/'>Potplayer</a> , <a href='http://en.kmplayer.com/'>Kmplayer</a> , <a href='https://www.videolan.org/index.html'>VLC</a><br><br>If Audio Not working Use VLC [for Android] ,  nPlayer [For ios]<br><br>If video getting struck in mxplayer change decode to sw"
     n=message.message_id
     w=message.reply_to_message.message_id
     user_id = message.chat.id
@@ -40,14 +40,22 @@ async def autofor_f(client, message):
     url_parts = shlex.split(message.text)
     if len(url_parts) == 1:
        f1= 1
-       m2 = f"🍁 Muxed English Subtitle 🍁\n\n"
+       telegraph = Telegraph()
+       telegraph.create_account(short_name='1337')
+       response = telegraph.create_page(
+         "Muxed English Subtitles",
+         html_content= m1
+         )
+       file_context= 'https://telegra.ph/{}'.format(response['path'])
+       m2 = f"<a href={file_context}>🍁 Muxed English Subtitle 🍁</a>\n\n"
+
     elif len(url_parts) == 2:
        n1 = url_parts[1]
        telegraph = Telegraph()
        telegraph.create_account(short_name='1337')
        response = telegraph.create_page(
          "Muxed Subtitles",
-         html_content="Muxed Subtitles : " + n1
+         html_content="Muxed Subtitles : " + n1 + m1
          )
        file_context= 'https://telegra.ph/{}'.format(response['path'])
        m2 =f"<a href={file_context}>🍁 Muxed Multi Subtitles 🍁</a>\n\n"
