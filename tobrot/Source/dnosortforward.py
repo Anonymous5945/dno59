@@ -81,7 +81,7 @@ async def dnosortfor1_f(client, message):
             if h[j][0] > h[j + 1][0]:
                  h[j], h[j + 1] = h[j + 1], h[j]
 
-     name , doc = zip(*h)
+     name2 , doc , name = zip(*h)
      for i,j in zip(name,doc):
        if i[:9].lower() == "@dramaost":
         
@@ -150,7 +150,7 @@ async def dnosortfor2_f(client, message):
             if h[j][0] > h[j + 1][0]:
                  h[j], h[j + 1] = h[j + 1], h[j]
 
-     name , doc = zip(*h)
+     name2 , doc , name = zip(*h)
      for i,j in zip(name,doc):
        if i[:9].lower() == "@dramaost":
         
