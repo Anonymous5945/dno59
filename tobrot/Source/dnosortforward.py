@@ -36,6 +36,7 @@ async def dnosortfor1_f(client, message):
     user_id = message.chat.id
     a=[]
     b=[]
+    c=[]
     url_parts = shlex.split(message.text)
     if len(url_parts) == 1:
        f1= 1
@@ -68,10 +69,12 @@ async def dnosortfor1_f(client, message):
         m = await client.get_messages(user_id, u_id)
         if m.media and m.document and m.document.file_name.lower().endswith(".mkv"):
          j = m.document.file_name
+         k = m.document.file_name.lower()
          h = m.document.file_id
-         a.append(j)
+         a.append(k)
          b.append(h)
-     h = [(a[i], b[i]) for i in range(0, len(a))]
+         c.append(j)
+     h = [(a[i], b[i], c[i]) for i in range(0, len(a))]
      n = len(h) 
      for i in range(n): 
         for j in range(n-i-1):
@@ -103,6 +106,7 @@ async def dnosortfor2_f(client, message):
     user_id = message.chat.id
     a=[]
     b=[]
+    c=[]
     url_parts = shlex.split(message.text)
     if len(url_parts) == 1:
        f1= 1
@@ -134,10 +138,12 @@ async def dnosortfor2_f(client, message):
         m = await client.get_messages(user_id, u_id)
         if m.media and m.document and m.document.file_name.lower().endswith(".mkv"):
          j = m.document.file_name
+         k = m.document.file_name.lower()
          h = m.document.file_id
-         a.append(j)
+         a.append(k)
          b.append(h)
-     h = [(a[i], b[i]) for i in range(0, len(a))]
+         c.append(j)
+     h = [(a[i], b[i], c[i]) for i in range(0, len(a))]
      n = len(h) 
      for i in range(n): 
         for j in range(n-i-1):
